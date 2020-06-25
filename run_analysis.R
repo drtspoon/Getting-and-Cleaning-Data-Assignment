@@ -112,4 +112,4 @@ mytable <- tidydata %>%
         jerkmean = mean(Jerkmean, na.rm = T),
         jerkstd = mean(Jerkstd, na.rm = T))
 mytable 
-write.csv(mytable, "summary.csv", row.names = FALSE)
+write.table(mytable, "summary.txt", row.names = FALSE)
