@@ -37,6 +37,7 @@ A lot of data tidying is done at this point. The data are untidy because they su
 - accelration std 
 - jerk mean 
 - jerk std 
+
 This leaves several categorical variables:
 - domain (time or frequency)
 - type (body or gravity)
