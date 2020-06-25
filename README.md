@@ -6,6 +6,12 @@ This repo contains the following files:
 - 'Codebook.txt': Gives a brief explanation of the variables in the output of 'run_analysis.R'
 - 'run_analysis.R'
 
+The output of the file ‘run_analysis.R’ is a further analysis of Human Activity Recognition Using Smartphones Data Set found in the UCI Machine Learning Repository. Information regarding the dataset may be found at
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+The original data set can be downloaded at 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+If this .zip file is extracted into your working directory, the script will run. 
 This script can be considered to be in 6 different sections to read the data into R and then complete the 5 tasks listed in the assignment and has been commented as such. 
 
 1. Reading the data
@@ -16,7 +22,7 @@ This script can be considered to be in 6 different sections to read the data int
 6. Output a table that give the mean of each variable by activity and subject number
 
 ## Reading the data
-The script will run so long as the zipped data are extracted to a folder named "UCI HAR Dataset" located in the working director. Each of these is read into R with the read.table() command. 
+The script will run so long as the zipped data are extracted to a folder named "UCI HAR Dataset" located in the working directory. 
 
 ## Merge the training and test data sets
 Despite the name of the instruction, there's no need to use the merge() command. The two data sets have identical variables. The two data sets are both absent two important variables, "activity" and "subject". These are first added to the test and train data sets respectively using cbind. The resulting sets are then combined using rbind(). 
