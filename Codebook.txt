@@ -3,7 +3,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 The original data set can be downloaded at 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The original study measures linear and rotational acceleration and jerk from body movement or gravity in both time and frequency domains. With some exceptions, these measures are projected onto the x, y, z dimensions or along the direction the resultant very points (magnitude). Data are taken from the Samsung Galaxy S smartphones of 30 participating subjects performing 6 activities (laying, sitting, standing, walking, walking upstairs, or walking downstairs). 
+The original study measures linear and rotational acceleration and jerk from body movement or gravity in both time and frequency domains. With some exceptions, these measures are projected onto the x, y, z dimensions or along the direction the resultant vector points (magnitude). Data are taken from the Samsung Galaxy S smartphones of 30 participating subjects performing 6 activities (laying, sitting, standing, walking, walking upstairs, or walking downstairs). 
 
 The table in 'summary.txt' is a summary of this data. 
 It can be read into R with the command,
@@ -18,3 +18,4 @@ The output table contains 6 variables:
 6. jerkstd - the std deviation of the same observations used in jerkmean.
 
 
+The units are normalised to the maximum and minimum readings of the accelerometer and gyroscope [-1:1]
