@@ -6,6 +6,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 The original study measures linear and rotational acceleration and jerk from body movement or gravity in both time and frequency domains. With some exceptions, these measures are projected onto the x, y, z dimensions or along the direction the resultant very points (magnitude). Data are taken from the Samsung Galaxy S smartphones of 30 participating subjects performing 6 activities (laying, sitting, standing, walking, walking upstairs, or walking downstairs). 
 
 The table in 'summary.txt' is a summary of this data. 
+It can be read into R with the command,
+df <- read.table("./summary.txt", header = TRUE)
 
 The output table contains 6 variables:
 1. activity - the activity the subject participates in while data is collected
