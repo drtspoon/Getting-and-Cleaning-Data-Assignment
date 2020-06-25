@@ -29,7 +29,7 @@ Despite the name of the instruction, there's no need to use the merge() command.
 This dataset now has one observation per row. We assign each row an id. This is necessary for later tidying steps. 
 
 ## Extract only the measurements on the mean and standard deviation for each measurement. 
-In the actual data set, the variables are not named, but their labels are contained in "features.txt" which was read into R during the first portion of the script. A vector "header" is created using "id" "subject", "activity", and the names from the "features.txt" data file. The grep() command then matches the indices of header that contain "mean()" or "std()" and stores the result to "meanstdcols". (the values 1, 2, are the first two elements of this vector. From the previous step you may noted that header[4] == features[1,2]) Meanstdcols can then be used to subset the data. 
+In the actual data set, the variables are not named, but their labels are contained in "features.txt" which was read into R during the first portion of the script. A vector "header" is created using "id" "subject", "activity", and the names from the "features.txt" data file. The grep() command then matches the indices of header that contain "mean()" or "std()" and stores the result to "meanstdcols". (the values 1, 2, 3 are the first three elements of this vector. From the previous step you may noted that header[4] == features[1,2]) Meanstdcols can then be used to subset the data. 
 There are other features that contain the word "mean" in their name. One set of these are mutations of mean data using angle(). The other is features that obtain a mean frequency of other data. These did not seem to me to means or standard deviations of measurements so they are not extracted. 
 
 A lot of data tidying is done at this point. The data are untidy because they suffer from multiple variables per column. After much thought, I decided that there should be four variables with numerical value: 
@@ -55,4 +55,4 @@ A new function, uncode(), is defined. This takes a number from 1 to 6 and substi
 This work was completed when we tidied the data as we had to assign column labels in those steps. 
 
 ## Output a table that gives the mean of each variable by activity and subject number
-Finally we use dplyr grammar to group the data by activity and subject and summarize the four numerical variables with the mean command. The output file uses write.csv and outputs "summary.csv"
+Finally we use dplyr grammar to group the data by activity and subject and summarize the four numerical variables with the mean command. The output file uses write.table and outputs "summary.txt"
