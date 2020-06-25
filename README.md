@@ -2,9 +2,9 @@
 Files for the Coursera Getting and Cleaning Data Assignment
 
 This repo contains the following files:
--'README.md':This document
--'Codebook.txt': Gives a brief explanation of the variables in the output of 'run_analysis.R'
--'run_analysis.R'
+- 'README.md':This document
+- 'Codebook.txt': Gives a brief explanation of the variables in the output of 'run_analysis.R'
+- 'run_analysis.R'
 
 This script can be considered to be in 6 different sections to read the data into R and then complete the 5 tasks listed in the assignment and has been commented as such. 
 
@@ -27,15 +27,15 @@ In the actual data set, the variables are not named, but their labels are contai
 There are other features that contain the word "mean" in their name. One set of these are mutations of mean data using angle(). The other is features that obtain a mean frequency of other data. These did not seem to me to means or standard deviations of measurements so they are not extracted. 
 
 A lot of data tidying is done at this point. The data are untidy because they suffer from multiple variables per column. After much thought, I decided that there should be four variables with numerical value: 
--accelearation mean 
--accelration std 
--jerk mean 
--jerk std 
+- accelearation mean 
+- accelration std 
+- jerk mean 
+- jerk std 
 This leaves several categorical variables:
--domain (time or frequency)
--type (body or gravity)
--device (accelerometer or gyroscope)
--dimension (x, y, z, or magnitude) (projection may be a better name)
+- domain (time or frequency)
+- type (body or gravity)
+- device (accelerometer or gyroscope)
+- dimension (x, y, z, or magnitude) (projection may be a better name)
 
 The strategy for tidying the data was to first manipulate the labels in the header vector so that they were formatted to facilitate gathering and separating using tidyr grammar. For example, features with dimension = magnitude have "Mag" appearing before "mean()" or "std()". This substring is removed and "-Mag" is concatenated to the end of the label to match the format for features with dimension = X, Y, or Z. Similar procedures identify which features measure Jerk and which measure Acceleration. 
 
